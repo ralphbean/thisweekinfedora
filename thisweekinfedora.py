@@ -94,6 +94,7 @@ def get_fedora_contributors(datetime_to, datetime_from):
     if 'FAS user created' in topics:
         del(topics['FAS user created'])
 
+    print "Getting contribs for week of %r" % datetime_from
     for topic in topics:
         messages = query_datagrepper(
             datetime_from, datetime_to, TOPICS[topic], full=True)
